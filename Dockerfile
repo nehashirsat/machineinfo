@@ -1,9 +1,11 @@
 FROM python:3
 
-ADD machineInfo.py /
+ADD . /Dir
+
+WORKDIR /Dir
 
 RUN pip install pystrich
 
-CMD [ "python", "./machineInfo.py" ]
+CMD [ "python", "./app.py" ]
 
-EXPOSE 3000
+EXPOSE 9000
