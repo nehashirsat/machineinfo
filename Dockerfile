@@ -1,11 +1,11 @@
 FROM python:3
 
-ADD . /Dir
+COPY . /demo
 
-WORKDIR /Dir
+WORKDIR /demo
 
-RUN pip install pystrich
-
-CMD [ "python", "./app.py" ]
+RUN pip install -r requirements.txt
 
 EXPOSE 9000
+
+CMD python ./app.py
