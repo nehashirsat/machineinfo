@@ -1,0 +1,5 @@
+Flask
+mysql-connector
+flask_mysqldb
+mysqlclient
+pyyaml==3.13b1
