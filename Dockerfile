@@ -6,4 +6,4 @@ RUN pip install pystrich
 
 CMD [ "python", "./machineInfo.py" ]
 
-EXPOSE 8080:80
+EXPOSE 3000
