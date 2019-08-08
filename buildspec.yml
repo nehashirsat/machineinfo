@@ -1,20 +1,20 @@
-phases:
-  install:
-    runtime-versions:
-    docker: 18
-  build:
-    commands:
+phases: 
+  build: 
+    commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t machineinfodemo ."
       - "docker tag machineinfodemo nehashirsat/devops_repo:v1.1.0"
-  post_build:
-    commands:
+  install: 
+    runtime-versions: 
+      docker: 18
+  post_build: 
+    commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
       - "docker push nehashirsat/devops_repo:v1.1.0"
-  pre_build:
-    commands:
+  pre_build: 
+    commands: 
       - "echo Logging in to Docker Hub..."
       - "docker login --username=\"nehashirsat\" --password=\"nehashirsat@123\""
 version: 0.2
