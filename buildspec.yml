@@ -3,7 +3,7 @@ phases:
     commands:
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "docker build -t Dockerfile ."
+      - "docker build -t machineinfodemo ."
       - "docker tag machineinfodemo nehashirsat/devops_repo:v1.1.0"
   post_build:
     commands:
