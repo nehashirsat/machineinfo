@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 'v1'
+Transform: 'AWS::Serverless-v1'
+Description: A starter AWS Lambda function.
+Parameters: 
+    IdentityNameParameter: 
+      Type: String
+Resources:
+  machineinfo:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: python3.7
+      CodeUri: .
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
+      Policies:
+        - SESSendBouncePolicy:
+            IdentityName: !Ref IdentityNameParameter
