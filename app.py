@@ -4,7 +4,6 @@ import platform
 
 app = Flask(__name__)
 
-
 @app.route('/machineinfo')
 
 def machineinfo():
