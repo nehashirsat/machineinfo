@@ -13,6 +13,7 @@ def machineinfo():
     host_ip = socket.gethostbyname(host_name)
     os_name = platform.system()
 
+    
 
     return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name)
 
