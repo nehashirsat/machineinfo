@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/machineinfo')
 
 def machineinfo():
-    #get machine detai
+    #get machine details
     host_name = socket.gethostname()
     host_ip = socket.gethostbyname(host_name)
     os_name = platform.system()
