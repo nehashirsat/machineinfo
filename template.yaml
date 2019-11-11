@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  mahineinfo
+
+  Sample SAM Template for mahineinfo
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  MachineinfoFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName: Machineinfo
+      CodeUri: machineinfo/
+      Handler: app.machineinfo
+      Runtime: python3.7
+      Events:
+        MachineinfoApi:
+          Type: Api 
+          Properties:
+            Path: /machineinfo
+            Method: get
+
+Outputs:
+  MachineinfoApi:
+    Description: "API Gateway endpoint URL for Prod stage for machineinfo function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/machineinfo/"
+  MachineinfoFunction:
+    Description: "machineinfo Lambda Function ARN"
+    Value: !GetAtt MachineinfoFunction.Arn
