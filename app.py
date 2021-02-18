@@ -1,10 +1,14 @@
 from flask import Flask,render_template,request,redirect,url_for
 import socket
 import platform
+import logging
 
 app = Flask(__name__)
 
+logging.basicConfig(filename='example.log', level=logging.DEBUG)
+
 @app.route('/machineinfo')
+
 
 def machineinfo():
     #get machine details
@@ -16,5 +20,5 @@ def machineinfo():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=9000)
+   app.run(debug=True, host='0.0.0.0', port=9000)
 
