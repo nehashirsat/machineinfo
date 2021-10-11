@@ -16,9 +16,6 @@ spec:
       containers:
       - name: machineinfo
         image: nehashirsat/machineinfo:v1
-        imagePullPolicy: Always
-        securityContext:
-          readOnlyRootFilesystem: true
         ports:
         - containerPort: 9000
         volumeMounts:
