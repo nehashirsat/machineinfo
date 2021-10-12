@@ -16,6 +16,8 @@ spec:
       containers:
       - name: machineinfo
         image: nehashirsat/machineinfo:v1
+        securityContext:
+          allowPrivilegeEscalation: false
         imagePullPolicy: Always
         ports:
         - containerPort: 9000
