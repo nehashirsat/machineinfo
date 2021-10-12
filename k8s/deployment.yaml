@@ -16,8 +16,6 @@ spec:
       containers:
       - name: machineinfo
         image: nehashirsat/machineinfo:v1
-        securityContext:
-           allowPrivilegeEscalation: false
         ports:
         - containerPort: 9000
         volumeMounts:
