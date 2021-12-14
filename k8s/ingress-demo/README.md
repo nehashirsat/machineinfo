@@ -1,4 +1,4 @@
-- helm repo lit
+- helm repo list
 - helm search repo nginx
 - helm install my-nginx stable/nginx-ingress --set rbac.create=true
 - kubectl expose deploy machineinfo-deploy-main --port 9000
