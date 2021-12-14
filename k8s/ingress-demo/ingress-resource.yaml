@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress-class: nginx
+  name: ingress-resource
+spec:
+  rules:
+  - host: machineinfo.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: machineinfo-deploy-main
+            port:
+              number: 9000
+  - host: blue.machineinfo.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: machineinfo-deploy-blue
+            port:
+              number: 9000
+  - host: pink.machineinfo.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: machineinfo-deploy-pink
+            port:
+              number: 9000
