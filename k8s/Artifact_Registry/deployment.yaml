@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: machineinfo
-        image: nehashirsat/machineinfo:v1
+        image: us-central1-docker.pkg.dev/cybage-devops/devopsrepo/machineinfo:v1
         ports:
         - containerPort: 9000
       imagePullSecrets:
