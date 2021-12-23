@@ -10,7 +10,7 @@
 # Step 3:
   - Create Kubernetes Secret using .docker/config.json file
   
-    kubectl create secret generic regcred \
+    kubectl create secret generic regcred '\'
     --from-file=.dockerconfigjson=/home/neha_shirsat21/.docker/config.json \
     --type=kubernetes.io/dockerconfigjson
 # Step 4 :
