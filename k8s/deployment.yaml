@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-cloud-machineinfo
-  namespace: dev
 spec:
   selector:
     matchLabels:
