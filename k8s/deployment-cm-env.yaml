@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-cloud-machineinfo
+spec:
+  selector:
+    matchLabels:
+      app: machineinfo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: machineinfo
+    spec:
+      containers:
+      - image: nehashirsat/machineinfo:v1
+        name: machineinfo
+        ports:
+        - containerPort: 9000
+        env:
+        - name: GOODCOLOR
+          valueFrom:
+            configMapKeyRef:
+              name: machineinfo-configmap
+              key: color.good
+        - name: BADCOLOR
+          valueFrom:
+            configMapKeyRef:
+              name: machineinfo-configmap
+              key: color.bad
