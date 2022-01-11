@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: machineinfo-configmap
 data:
- 
-  player_initial_lives: "3"
-  ui_properties_file_name: "user-interface.properties"
+  color.good: "green"
+  color.bad: "red"
