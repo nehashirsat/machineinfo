@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: machineinfo
+spec:
+  containers:
+  - name: machineinfo
+    image: nehashirsat/machineinfo:v1
+    ports:
+    - containerPort: 9000
