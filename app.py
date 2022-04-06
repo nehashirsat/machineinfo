@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 logging.basicConfig(filename='example.log', level=logging.DEBUG)
 
-@app.route('/machineinfo')
+@app.route('/')
 
 
 def machineinfo():
