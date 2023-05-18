@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machineinfo-pink
+spec:
+  selector:
+    matchLabels:
+      app: machineinfo-pink
+  template:
+    metadata:
+      labels:
+        app: machineinfo-pink
+    spec:
+      containers:
+      - name: machineinfo-pink
+        image: nehashirsat/devops-hostinfo:pink
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: machineinfo-pink
+spec:
+  type: ClusterIP
+  selector:
+    app: machineinfo-pink
+  ports:
+  - port: 80
+    targetPort: 80
