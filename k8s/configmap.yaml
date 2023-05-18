@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: machineinfo-configmap
-data:
-  color.good: "green"
-  color.bad: "red"
