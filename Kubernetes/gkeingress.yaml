@@ -14,7 +14,6 @@ spec:
             backend:
               service:
                 name: machineinfo-pink
-                namespace: pink
                 port:
                   number: 80
     - host: hostinfoblue.hhaexchange.com
@@ -25,6 +24,5 @@ spec:
             backend:
               service:
                 name: machineinfo-blue
-                namespace: blue
                 port:
                   number: 80
